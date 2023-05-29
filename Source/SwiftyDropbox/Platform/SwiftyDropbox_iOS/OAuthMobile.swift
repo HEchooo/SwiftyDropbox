@@ -461,6 +461,7 @@ open class MobileSafariViewController: SFSafariViewController, SFSafariViewContr
 
     public func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
         if (!didLoadSuccessfully) {
+            self.cancelHandler()
             controller.dismiss(animated: true, completion: nil)
         }
     }
