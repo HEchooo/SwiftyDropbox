@@ -145,9 +145,9 @@ public class DropboxOAuthManager: AccessTokenRefreshing {
 
         let url = authURL()
 
-        if checkAndPresentPlatformSpecificAuth(sharedApplication) {
-            return
-        }
+        // if checkAndPresentPlatformSpecificAuth(sharedApplication) {
+        //     return
+        // }
 
         let tryIntercept: ((URL) -> Bool) = { url in
             if self.canHandleURL(url) {
